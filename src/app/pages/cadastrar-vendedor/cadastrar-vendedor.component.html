@@ -1,0 +1,80 @@
+<!-- <h1 class="mt-4">Vendedor</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item active">Cadastrar Vendedor</li>
+</ol>
+
+<div class="container">
+  <form #clienteForm="ngForm">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Nome:</label>
+          <input type="text" class="form-control" [(ngModel)]="vendedorList.nome" name="nome" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Telefone:</label>
+          <input type="text" class="form-control" [(ngModel)]="vendedorList.telefone" name="telefone">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Cidade:</label>
+          <input type="number" class="form-control" [(ngModel)]="vendedorList.cidade" name="cidade">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Regiao:</label>
+          <input type="number" class="form-control" [(ngModel)]="vendedorList.regiao" name="regiao">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-success"
+         data-toggle="modal" data-target="#adicionarModal">
+          Salvar
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-danger" routerLink="/funcionario">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal fade" id="adicionarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Para Adicionar coloque sua senha:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label>Senha:</label>
+        <input type="password" class="form-control" [(ngModel)]="senhaCadastro" name="senhaCadastro">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn " data-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="salvar(funcionarioList)"
+        >Salvar</button>
+      </div>
+    </div>
+  </div>
+</div> -->

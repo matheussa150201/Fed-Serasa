@@ -1,0 +1,11 @@
+.card-vendedor {
+  width: 50rem;
+  margin-top: 50px;
+}
+
+.description {
+  max-width: 300ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

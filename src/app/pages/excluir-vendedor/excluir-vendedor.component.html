@@ -1,0 +1,54 @@
+<h1 class="mt-4">Excluir Vendedor</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item active">Vendedor : {{vendedorRecebido.nome}}</li>
+</ol>
+
+<div class="container">
+  <form #clienteForm="ngForm">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>{{vendedorRecebido.telefone}}</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#excluirModal">
+          Excluir
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-danger" routerLink="/vendedor">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal fade" id="excluirModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Para Excluir coloque sua senha:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label>Senha:</label>
+        <input type="password" class="form-control" [(ngModel)]="senha" name="senha">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn " data-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="excluir(vendedorRecebido)"
+        >Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>

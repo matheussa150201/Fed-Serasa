@@ -1,0 +1,32 @@
+<h1 class="mt-4">Vendedor</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item active">Serasa vendedor</li>
+</ol>
+
+<div class="row">
+  <div class="col-md-3">
+    <button type="button" class="btn btn-success" routerLink="/cadastrar-vendedor"> Adicionar Vendedor</button>
+  </div>
+  <div class="col-md-3">
+    <button type="button" class="btn btn-primary" routerLink="/estados-corresponente/{{ vendedor.id }}">
+      estados correspondentes à regiao
+    </button>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body" class="card-vendedor" *ngFor="let vendedo of vendedor">
+    <h5 class="card-title" style="font-size: 2rem;"> {{ vendedo.nome }}</h5>
+    <p class="card-text description" style="font-size: 1rem;"> {{ vendedo.telefone }} </p>
+    <button type="button" class="btn btn-danger" style="margin-right:5px;"
+      routerLink="/excluir-vendedor/{{ vendedo.id }}" data-toggle="modal" data-target="#exampleModal"
+      (click)="excluir()">
+      Excluir</button>
+    <button type="button" class="btn btn-warning" style="margin-right:5px;"
+      routerLink="/editar-vendedor/{{ vendedo.id }}" (click)="editar()">
+      Editar
+    </button>
+    <app-editar-vendedor *ngIf="bolEditar" [vendedorRecebido]="vendedorCompartilhado"></app-editar-vendedor>
+    <app-excluir-vendedor *ngIf="bolExcluir" [vendedorRecebido]="vendedorCompartilhado"></app-excluir-vendedor>
+    <app-editar-vendedor *ngIf="bolLerMais" [vendedorRecebido]="vendedorCompartilhado"></app-editar-vendedor>
+  </div>
+</div>
