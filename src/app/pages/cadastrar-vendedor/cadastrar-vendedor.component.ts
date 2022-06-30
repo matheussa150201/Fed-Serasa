@@ -26,18 +26,18 @@ export class CadastrarVendedorComponent implements OnInit {
     //   this.id = urlParams['id'];
     //   console.log(urlParams);
     //   if (this.id) {
-    //     this.VendedorService.obterNoticiaPorId(this.id).subscribe(
-    //       (res) => (this.noticia = res),
-    //       (error) => (this.noticia = new Noticia())
+    //     this.VendedorService.obterVendedorPorId(this.id).subscribe(
+    //       (res) => (this.vendedor = res),
+    //       (error) => (this.vendedor = new Vendedor())
     //     );
     //   }
     // });
   }
 
-  // salvarNoticia() {
+  // salvarVendedor() {
   //   if(this.senha == 123) {
-  //     this.service.criarNoticia(this.noticia).subscribe((res) => {
-  //       this.mudarRota.navigate(['/noticia']);
+  //     this.service.criarVendedor(this.vendedor).subscribe((res) => {
+  //       this.mudarRota.navigate(['/vendedor']);
   //     });
   //   }
   //   else {
